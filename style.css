@@ -1,0 +1,392 @@
+:root {
+--bg: #000000;
+
+--text: #ffffff;
+--text-muted: #b3b3b3;
+
+--primary: #e50914;
+--secondary: #f5c518;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+li {
+    list-style: none;
+}
+
+.container{
+    max-width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+footer{
+    background-color: var(--primary);
+    padding: 20px;
+}
+
+p{
+    line-height: 1.5;
+}
+
+/* NAVBAR ------------------------ */
+
+nav{
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    color: var(--text-muted);
+}
+
+.navbar {
+    display: flex;
+    padding: 20px; 
+    color: var(--text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    margin-right: auto;
+    color: var(--text);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.kryss,
+.burger {
+    display: none !important;
+}
+
+
+@media (width < 700px) {
+    .burger {
+        display: block !important;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: -200px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary);
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        top: 59px;
+        z-index: 2;
+    }
+
+    
+
+    .kryss.active {
+        display: block !important;
+    }
+
+    .burger.active {
+        display: none !important;
+    }
+
+
+}
+
+/* NAVBAR ------------------------ */
+
+/* HOVEDSIDE --------------------- */
+.hero{
+    background-image: url(./bilder/image.png);
+    min-height: 100vh;
+    background-position: center;
+}
+
+.hero .container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+
+}
+
+.top{
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+
+.hero h1{
+    color: var(--primary);
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero p{
+    color: var(--text);
+    font-size: 2rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+}
+
+.arrow{
+    Color: var(--text);
+    font-size: 2rem;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.top .container{
+    padding-top: 100px;
+}
+.top h2{
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.movies{
+    padding-top: 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.movies img{
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    filter: brightness(60%);
+}
+
+.movie {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px var(--bg);
+    z-index: 2;
+}
+
+.featured{
+    background-color: var(--bg);
+}
+
+.featured .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.featured h2{
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+
+.featured img{
+    max-width: 400px;
+}
+
+.movie-card{
+    max-width: 440px;
+    background-color: var(--primary);
+    color: var(--text);
+    padding: 20px;
+    border-radius: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about{
+    padding: 10px;
+}
+
+.featured .btn{
+    padding: 10px;
+    background-color: var(--bg);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+}
+
+.featured .btn:hover{
+    cursor: pointer;
+}
+
+.text{
+    display: none;
+}
+
+.text.active{
+    display: block;
+}
+/* HOVEDSIDE --------------------- */
+
+/* RATING ------------------ */
+.star-container{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.star-container .solid {
+    display: none;
+    font-size: 25px;
+}
+
+
+.star-container .regular{
+    font-size: 25px;
+    display: block;
+}
+
+.ratings{
+    background-color: var(--bg);
+}
+
+.ratings .container{
+    min-height: 100vh;
+}
+
+.ratings img{
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.ratings h1{
+    font-size: 4rem;
+    color: var(--text);
+    text-align: center;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.movie-rating{
+    background-color: var(--primary);
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 50px;
+    row-gap: 50px;
+}
+
+.favorite{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.movie-rating .filled{
+    display: none;
+    font-size: 30px;
+}
+.movie-rating .heart{
+    display: block;
+    font-size: 30px;
+}
+.movie-rating .filled.active{
+    display: block;
+}
+.movie-rating .heart.active{
+    display: none;
+}
+
+.movie-rating{
+    transition: 0.3s;
+}
+
+.movie-rating:hover{
+    transform: scale(1.03);
+}
+
+.heart-container{
+    display: flex;
+    gap: 5px;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.favorite-count{
+    color: var(--text);
+    font-size: 2rem;
+}
+
+.heart-container .filled{
+    font-size: 30px;
+}
+
+/* RATING ------------------ */
+
+/* QUIZ -------------------- */
+.quiz{
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+/* QUIZ -------------------- */
