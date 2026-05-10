@@ -61,8 +61,6 @@ const regularEls = document.querySelectorAll(".regular")
 
 for (let i = 0; i < regularEls.length; i++) {
 
-    solidEls[i].style.display = "none"
-
     regularEls[i].addEventListener("click", function () {
 
         regularEls[i].style.display = "none"
@@ -103,3 +101,114 @@ for (const heartEl of heartEls) {
     })
 }
 
+const oneEl = document.querySelector(".one")
+const twoEl = document.querySelector(".two")
+const threeEl = document.querySelector(".three")
+const happyEl = document.querySelector(".happy")
+const sadEl = document.querySelector(".sad")
+const friendsEl = document.querySelector(".friends")
+const aloneEl = document.querySelector(".alone")
+const fantasyEl = document.querySelector(".fantasy")
+const realEl = document.querySelector(".real")
+const quizEl = document.querySelector(".quiz-wrapper")
+
+let mood = ""
+let people = ""
+let world = ""
+
+oneEl.classList.add("active")
+
+happyEl.addEventListener("click", function () {
+    mood = "Happy"
+    oneEl.classList.remove("active")
+    twoEl.classList.add("active")
+})
+
+
+sadEl.addEventListener("click", function () {
+    mood = "Sad"
+    oneEl.classList.remove("active")
+    twoEl.classList.add("active")
+})
+
+
+friendsEl.addEventListener("click", function () {
+    people = "Friends"
+    twoEl.classList.remove("active")
+    threeEl.classList.add("active")
+})
+
+
+aloneEl.addEventListener("click", function () {
+    people = "Alone"
+    twoEl.classList.remove("active")
+    threeEl.classList.add("active")
+})
+
+fantasyEl.addEventListener("click", function () {
+    world = "Fantasy"
+    showResult()
+})
+
+realEl.addEventListener("click", function () {
+    world = "Real"
+    showResult()
+})
+
+function showResult() {
+
+    oneEl.classList.remove("active")
+    twoEl.classList.remove("active")
+    threeEl.classList.remove("active")
+
+    let result = ""
+
+    if (mood === "Happy" && people === "Friends" && world === "Fantasy") {
+        result = "Harry Potter"
+    }
+
+    else if (mood === "Happy" && people === "Friends" && world === "Real") {
+        result = "The Hangover"
+    }
+
+    else if (mood === "Happy" && people === "Alone" && world === "Fantasy") {
+        result = "Frozen"
+    }
+
+    else if (mood === "Happy" && people === "Alone" && world === "Real") {
+        result = "Forrest Gump"
+    }
+
+    else if (mood === "Sad" && people === "Friends" && world === "Fantasy") {
+        result = "Lord of the Rings"
+    }
+
+    else if (mood === "Sad" && people === "Friends" && world === "Real") {
+        result = "The Pursuit of Happyness"
+    }
+
+    else if (mood === "Sad" && people === "Alone" && world === "Fantasy") {
+        result = "Pan’s Labyrinth"
+    }
+
+    else if (mood === "Sad" && people === "Alone" && world === "Real") {
+        result = "The Green Mile"
+    }
+
+    quizEl.innerHTML = result
+
+    quizEl.style.fontSize = "4rem"
+    quizEl.style.fontWeight = "bold"
+    quizEl.style.letterSpacing = "3px"
+    quizEl.style.textTransform = "uppercase"
+
+    const resetEl = document.createElement("button")
+    resetEl.className = "reset"
+    resetEl.innerHTML = "Reset"
+    quizEl.appendChild(resetEl)
+
+    resetEl.addEventListener("click", function () {
+        location.reload()
+    })
+
+}

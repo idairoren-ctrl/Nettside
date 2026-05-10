@@ -1,11 +1,11 @@
 :root {
---bg: #000000;
+    --bg: #000000;
 
---text: #ffffff;
---text-muted: #b3b3b3;
+    --text: #ffffff;
+    --text-muted: #b3b3b3;
 
---primary: #e50914;
---secondary: #f5c518;
+    --primary: #e50914;
+    --secondary: #f5c518;
 }
 
 
@@ -25,23 +25,23 @@ li {
     list-style: none;
 }
 
-.container{
+.container {
     max-width: min(90%, 1200px);
     margin: 0 auto;
 }
 
-footer{
+footer {
     background-color: var(--primary);
     padding: 20px;
 }
 
-p{
+p {
     line-height: 1.5;
 }
 
 /* NAVBAR ------------------------ */
 
-nav{
+nav {
     background-color: var(--primary);
     position: sticky;
     top: 0;
@@ -60,7 +60,7 @@ nav{
 
 .navbar {
     display: flex;
-    padding: 20px; 
+    padding: 20px;
     color: var(--text);
 }
 
@@ -103,7 +103,7 @@ nav{
         z-index: 2;
     }
 
-    
+
 
     .kryss.active {
         display: block !important;
@@ -119,13 +119,13 @@ nav{
 /* NAVBAR ------------------------ */
 
 /* HOVEDSIDE --------------------- */
-.hero{
+.hero {
     background-image: url(./bilder/image.png);
     min-height: 100vh;
     background-position: center;
 }
 
-.hero .container{
+.hero .container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -136,24 +136,24 @@ nav{
 
 }
 
-.top{
+.top {
     min-height: 100vh;
     background-color: var(--bg);
 }
 
-.hero h1{
+.hero h1 {
     color: var(--primary);
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
-.hero p{
+.hero p {
     color: var(--text);
     font-size: 2rem;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -162,19 +162,20 @@ nav{
     top: 300px;
 }
 
-.arrow{
+.arrow {
     Color: var(--text);
     font-size: 2rem;
 }
 
-.arrow:hover{
+.arrow:hover {
     cursor: pointer;
 }
 
-.top .container{
+.top .container {
     padding-top: 100px;
 }
-.top h2{
+
+.top h2 {
     color: white;
     font-size: 4rem;
     text-transform: uppercase;
@@ -183,7 +184,7 @@ nav{
     text-align: center;
 }
 
-.movies{
+.movies {
     padding-top: 20px;
     display: flex;
     overflow-x: auto;
@@ -191,7 +192,7 @@ nav{
 }
 
 
-.movies img{
+.movies img {
     width: 350px;
     height: 500px;
     object-fit: cover;
@@ -216,11 +217,11 @@ nav{
     z-index: 2;
 }
 
-.featured{
+.featured {
     background-color: var(--bg);
 }
 
-.featured .container{
+.featured .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,7 +231,7 @@ nav{
     padding-top: 20px;
 }
 
-.featured h2{
+.featured h2 {
     color: white;
     font-size: 3rem;
     text-transform: uppercase;
@@ -238,17 +239,17 @@ nav{
     font-size: 4rem;
 }
 
-.featured img{
+.featured img {
     max-width: 400px;
 }
 
-.movie-card{
+.movie-card {
     max-width: 440px;
     background-color: var(--primary);
     color: var(--text);
     padding: 20px;
     border-radius: 15px;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,11 +257,11 @@ nav{
     text-align: center;
 }
 
-.about{
+.about {
     padding: 10px;
 }
 
-.featured .btn{
+.featured .btn {
     padding: 10px;
     background-color: var(--bg);
     color: var(--text);
@@ -268,21 +269,22 @@ nav{
     border-radius: 5px;
 }
 
-.featured .btn:hover{
+.featured .btn:hover {
     cursor: pointer;
 }
 
-.text{
+.text {
     display: none;
 }
 
-.text.active{
+.text.active {
     display: block;
 }
+
 /* HOVEDSIDE --------------------- */
 
 /* RATING ------------------ */
-.star-container{
+.star-container {
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -294,27 +296,27 @@ nav{
 }
 
 
-.star-container .regular{
+.star-container .regular {
     font-size: 25px;
     display: block;
 }
 
-.ratings{
+.ratings {
     background-color: var(--bg);
 }
 
-.ratings .container{
+.ratings .container {
     min-height: 100vh;
 }
 
-.ratings img{
+.ratings img {
     width: 350px;
     height: 500px;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
 
-.ratings h1{
+.ratings h1 {
     font-size: 4rem;
     color: var(--text);
     text-align: center;
@@ -323,70 +325,167 @@ nav{
     letter-spacing: 3px;
 }
 
-.movie-rating{
+.movie-rating {
     background-color: var(--primary);
     width: 350px;
     border-radius: 10px;
     position: relative;
 }
 
-.wrapper{
+.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 50px;
     row-gap: 50px;
 }
 
-.favorite{
+.favorite {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
-.movie-rating .filled{
+.movie-rating .filled {
     display: none;
     font-size: 30px;
 }
-.movie-rating .heart{
+
+.movie-rating .heart {
     display: block;
     font-size: 30px;
 }
-.movie-rating .filled.active{
+
+.movie-rating .filled.active {
     display: block;
 }
-.movie-rating .heart.active{
+
+.movie-rating .heart.active {
     display: none;
 }
 
-.movie-rating{
+.movie-rating {
     transition: 0.3s;
 }
 
-.movie-rating:hover{
+.movie-rating:hover {
     transform: scale(1.03);
 }
 
-.heart-container{
+.heart-container {
     display: flex;
     gap: 5px;
     padding-top: 20px;
     align-items: center;
 }
 
-.favorite-count{
+.favorite-count {
     color: var(--text);
     font-size: 2rem;
 }
 
-.heart-container .filled{
+.heart-container .filled {
     font-size: 30px;
 }
 
 /* RATING ------------------ */
 
 /* QUIZ -------------------- */
-.quiz{
-    background-color: var(--bg);
+.quizes {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(./bilder/cinema.png);
+
+    background-size: cover;
+    background-position: center;
+
     min-height: 100vh;
 }
+
+.quizes h1 {
+    font-size: 5rem;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.quizes h3 {
+    font-size: 2.3rem;
+    color: var(--bg);
+    margin-bottom: 20px;
+}
+
+.quizes .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 60px;
+}
+
+.quiz-wrapper {
+    background-color: var(--primary);
+    padding: 40px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz.one {
+    display: none;
+}
+
+.quiz.two {
+    display: none;
+}
+
+.quiz.three {
+    display: none;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.quiz.active {
+    display: flex;
+}
+
+.reset,
+.btn-container button {
+    padding: 14px 28px;
+    background-color: var(--secondary);
+    border: none;
+    color: black;
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-container button:hover,
+.reset:hover {
+
+    cursor: pointer;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* QUIZ -------------------- */
