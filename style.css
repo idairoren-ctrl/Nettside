@@ -30,10 +30,6 @@ li {
     margin: 0 auto;
 }
 
-footer {
-    background-color: var(--primary);
-    padding: 20px;
-}
 
 p {
     line-height: 1.5;
@@ -75,6 +71,9 @@ nav {
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
+    display: flex;
+    justify-items: center;
+    gap: 5px;
 }
 
 .kryss,
@@ -83,7 +82,7 @@ nav {
 }
 
 
-@media (width < 700px) {
+@media (width < 800px) {
     .burger {
         display: block !important;
     }
@@ -96,6 +95,7 @@ nav {
         right: 0;
         background-color: var(--primary);
         padding: 20px;
+        padding-left: 50px;
     }
 
     .nav-links.active {
@@ -113,7 +113,33 @@ nav {
         display: none !important;
     }
 
+    .hero h1{
+        text-align: center;
+    }
 
+    .featured h2{
+        text-align: center;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr !important; 
+        justify-items: center; /* sentrerer horisontalt i grid-cellene */
+    }
+
+    .quizes h3{
+        text-align: center;
+    }
+}
+
+@media(800px < width < 1200px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr !important; 
+        justify-items: center; /* sentrerer horisontalt i grid-cellene */
+    }
+
+    .hero h1{
+        text-align: center;
+    }
 }
 
 /* NAVBAR ------------------------ */
@@ -151,6 +177,7 @@ nav {
 .hero p {
     color: var(--text);
     font-size: 2rem;
+    font-family: cursive;
 }
 
 .header {
@@ -215,6 +242,8 @@ nav {
     color: white;
     text-shadow: 2px 2px 10px var(--bg);
     z-index: 2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 }
 
 .featured {
@@ -271,6 +300,10 @@ nav {
 
 .featured .btn:hover {
     cursor: pointer;
+}
+
+.featured p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .text {
@@ -422,6 +455,7 @@ nav {
     align-items: center;
     min-height: 100vh;
     gap: 60px;
+    padding-bottom: 20px;
 }
 
 .quiz-wrapper {
@@ -489,3 +523,26 @@ nav {
 }
 
 /* QUIZ -------------------- */
+
+/* FOOTER ------------------*/
+footer {
+    background-color: var(--primary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer>* {
+    padding: 10px;
+}
+
+.sosiale-medier {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+/* FOOTER ------------------*/

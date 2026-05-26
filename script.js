@@ -19,7 +19,7 @@ const topSection = document.querySelector(".top");
 
 if (arrow && topSection) {
     arrow.addEventListener("click", function () {
-        topSection.scrollIntoView({ behavior: "smooth" });
+        topSection.scrollIntoView({behavior: "smooth"});
     });
 }
 
@@ -201,6 +201,7 @@ function showResult() {
     quizEl.style.fontWeight = "bold"
     quizEl.style.letterSpacing = "3px"
     quizEl.style.textTransform = "uppercase"
+    quizEl.style.textAlign = "center"
 
     const resetEl = document.createElement("button")
     resetEl.className = "reset"
